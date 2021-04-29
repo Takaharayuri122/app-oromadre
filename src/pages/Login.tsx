@@ -6,9 +6,11 @@ export function Login() {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
-        <View style={styles.content}>
-          <Image source={logo} style={styles.image} resizeMode="contain" />
-        </View>
+        <TouchableWithoutFeedback>
+          <View style={styles.content}>
+            <Image source={logo} style={styles.image} resizeMode="contain" />
+          </View>
+        </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     </SafeAreaView>
   )

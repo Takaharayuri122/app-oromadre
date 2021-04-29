@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';

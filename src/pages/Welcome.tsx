@@ -1,7 +1,7 @@
 import React from 'react';
-import { SafeAreaView, Text, Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native'
+import { Text, Image } from 'react-native-ui-lib';
 import colors from '../styles/colors';
-import { FontAwesome } from '@expo/vector-icons';
 import fonts from '../styles/fonts';
 import { useNavigation } from '@react-navigation/core';
 import logo from '../assets/images/logo.png';
