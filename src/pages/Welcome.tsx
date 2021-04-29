@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView } from 'react-native'
+import { StyleSheet, SafeAreaView, View } from 'react-native'
 import { Text, Image } from 'react-native-ui-lib';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import { useNavigation } from '@react-navigation/core';
 import logo from '../assets/images/logo.png';
-import { PrimaryButton } from '../components/Buttons';
+import { OutlineButton, PrimaryButton } from '../components/Buttons';
 
 
 export function Welcome() {
@@ -30,7 +30,7 @@ export function Welcome() {
       </Text> */}
 
 
-      <PrimaryButton title="Começar" iconSize={20} onPress={onNavigate}></PrimaryButton>
+      <PrimaryButton disabled={false} title="Começar" onPress={onNavigate}></PrimaryButton>
 
     </SafeAreaView>
   )
@@ -75,8 +75,5 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: colors.white,
     fontWeight: 'bold'
-  },
-  containerButton: {
-    // paddingHorizontal: 0
   }
 })
