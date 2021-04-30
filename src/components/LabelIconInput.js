@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TextInput} from "react-native";
 import config from '../styles/config';
-import Icon from "react-native-vector-icons/Feather";
+import Feather from "@expo/vector-icons";
 
 export default LabelIconInput = (props) => {
 
@@ -11,7 +11,7 @@ export default LabelIconInput = (props) => {
         <View style={config.style.formField}>
             <View style={config.style.labelWrapper}>
                 <View style={config.style.labelIconWrapper}>
-                    <Icon name={icon} color={config.primaryColor} size={15} />
+                    <Feather name={icon} color={config.primaryColor} size={15} />
                 </View>
                 <View>
                     <Text style={config.style.labelText}>{label}</Text>

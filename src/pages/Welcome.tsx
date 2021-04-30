@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View } from 'react-native'
-import { Text, Image } from 'react-native-ui-lib';
+import { Text, Image } from 'react-native';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import { useNavigation } from '@react-navigation/core';
 import logo from '../assets/images/logo.png';
-import { OutlineButton, PrimaryButton } from '../components/Buttons';
+import { Btn } from '../components';
 
 
 export function Welcome() {
@@ -29,8 +29,7 @@ export function Welcome() {
         Administração de Criptoativos
       </Text> */}
 
-
-      <PrimaryButton disabled={false} title="Começar" onPress={onNavigate}></PrimaryButton>
+      <Btn type="primary" label="Começar" onPress={onNavigate}></Btn>
 
     </SafeAreaView>
   )

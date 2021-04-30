@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "generate": "plop"
   },
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.1.0",
@@ -44,6 +45,7 @@
     "@types/date-fns": "^2.6.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "plop": "^2.7.4",
     "typescript": "~4.0.0"
   },
   "private": true

@@ -1,6 +1,6 @@
 import React from 'react';
 import config from '../styles/config';
-import IonIcon from 'react-native-vector-icons/dist/Ionicons';
+import { IonIcon } from '@expo/vector-icons';
 
 export default Checkbox = (props) => {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TextInput, FlatList, Modal, SafeAreaView} from "react-native";
 import config from '../styles/config';
-import Icon from "react-native-vector-icons/Feather";
+import {Feather} from "@expo/vector-icons";
 
 export default class Picker extends React.Component {
     
@@ -21,7 +21,7 @@ export default class Picker extends React.Component {
         return (
             <ListItem 
                 onPress={() => this.selectItem(item)}
-                icon={this.props.value == item.label ? <Icon name="check" size={20} color={config.primaryColor} /> : null}
+                icon={this.props.value == item.label ? <Feather name="check" size={20} color={config.primaryColor} /> : null}
             >
                 {item.icon ? item.icon : null}
                 <P style={{marginBottom: 0}}>{item.label}</P>

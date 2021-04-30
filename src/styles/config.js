@@ -1,6 +1,7 @@
 import { Platform } from "react-native";
+import colors from "./colors";
 
-const $primaryColor = '#0066ff';
+const $primaryColor = colors.primary;
 const $secondaryColor = '#c2185b';
 const $lightColor = '#607d8b';
 const $warningColor = '#d32f2f';
@@ -10,8 +11,8 @@ const $borderRadius = 10;
 
 export default {
 	appVersion: "1.1",
-	headingFont: Platform.OS == 'android' ? 'OpenSansBold' : 'helvetica-bold',
-	defaultFont: Platform.OS == 'android' ? 'OpenSansRegular' : 'helvetica',
+	headingFont: Platform.OS == 'android' ? 'Poppins_600SemiBold' : 'helvetica-bold',
+	defaultFont: Platform.OS == 'android' ? 'Poppins_400Regular' : 'helvetica',
 	defaultFontSize: Platform.OS == 'ios' ? 16 : 14,
 	layoutMode: $layout,
 	backgroundColor: $layout =='dark' ? '#222222' : '#f2f2f2',

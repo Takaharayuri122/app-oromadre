@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import colors from '../styles/colors';
 import { Welcome } from '../pages/Welcome';
 import { Login } from '../pages/Login';
+import { Register } from '../pages/Register';
 
 const stackRoutes = createStackNavigator();
 
@@ -18,6 +19,7 @@ const AppRoutes: React.FC = () => (
 
     <stackRoutes.Screen name="Welcome" component={Welcome}></stackRoutes.Screen>
     <stackRoutes.Screen name="Login" component={Login}></stackRoutes.Screen>
+    <stackRoutes.Screen name="Register" component={Register}></stackRoutes.Screen>
 
   </stackRoutes.Navigator>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import config from '../styles/config';
 import {View} from 'react-native';
-import Icon from "react-native-vector-icons/Feather";
+import { Feather } from "@expo/vector-icons";
 
 export default IconBtn = (props) => {
     const {onPress, style, icon, color, badge, size} = props;
@@ -9,7 +9,7 @@ export default IconBtn = (props) => {
         <View>
             <View style={{alignSelf: 'flex-start'}}>
                 <Touchable onPress={() => onPress()} style={[config.style.iconBtn, style || {}]}>
-                    <Icon name={icon} size={size || 22} color={color || config.defaultFontColor} />
+                    <Feather name={icon} size={size || 22} color={color || config.defaultFontColor} />
                     {
                         badge ? 
                             <View style={{

@@ -21,7 +21,7 @@ export function Login() {
             <View style={styles.formContainer}>
               <View style={{ marginBottom: 20 }}>
                 <TextInput style={inputsStyles.field} placeholder="E-mail" autoCompleteType="email" />
-                <TextInput style={inputsStyles.field} placeholder="Senha" autoCompleteType="password" />
+                <TextInput secureTextEntry={true} style={inputsStyles.field} placeholder="Senha" autoCompleteType="password" />
               </View>
 
               <PrimaryButton title="Entrar" />

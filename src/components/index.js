@@ -17,7 +17,7 @@ export {default as ImageCard} from './ImageCard';
 export {default as SimpleListItem} from './SimpleListItem';
 export {default as ListItem} from './ListItem';
 export {default as Touchable} from './Touchable';
-export {default as StarRating} from './StarRating';
+// export {default as StarRating} from './StarRating';
 export {default as SelectableList} from './SelectableList';
 
 export {default as H1} from './H1';
@@ -34,7 +34,7 @@ export {default as IconBtn} from './IconBtn';
 export {default as FloatingLabelInput} from './FloatingLabelInput';
 export {default as LabelIconInput} from './LabelIconInput';
 export {default as Picker} from './Picker';
-export {default as Checkbox} from './Checkbox';
+// export {default as Checkbox} from './Checkbox';
 
 
 
