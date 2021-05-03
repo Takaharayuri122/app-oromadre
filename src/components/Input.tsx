@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import colors from '../styles/colors';
-import fonts from '../styles/fonts';
+import { StyleSheet } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
+import config from '../styles/config';
 
 
-export function Input({...props}) {
+export function Input({ ...props }) {
   return (
-    <View>
-
-    </View>
+    <TextInput style={styles.field}  {...props} placeholder={props.placeholder} autoCompleteType={props.type} />
   )
 };
+
+const styles = StyleSheet.create({
+  field: config.field
+})

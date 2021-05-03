@@ -6,8 +6,19 @@ import { OutlineButton, PrimaryButton } from '../components/Buttons';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import inputsStyles from '../styles/inputsStyles';
+import { useNavigation } from '@react-navigation/core';
+import { Input } from '../components/Input';
 
 export function Login() {
+  const navigation = useNavigation();
+  function onNext() {
+    navigation.navigate('Generic.Confirmation', {
+      title: 'Para que possamos iniciar seu cadastro, é necessário que você confirme algumas informações',
+      button: 'Continuar',
+      route: 'Register'
+    })
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
@@ -20,12 +31,12 @@ export function Login() {
 
             <View style={styles.formContainer}>
               <View style={{ marginBottom: 20 }}>
-                <TextInput style={inputsStyles.field} placeholder="E-mail" autoCompleteType="email" />
-                <TextInput secureTextEntry={true} style={inputsStyles.field} placeholder="Senha" autoCompleteType="password" />
+                <Input placeholder="E-mail" autoCompleteType="email"/>
+                <Input placeholder="Senha" autoCompleteType="password" secureTextEntry={true}/>
               </View>
 
               <PrimaryButton title="Entrar" />
-              <OutlineButton title="Cadastrar-se" />
+              <OutlineButton onPress={onNext} title="Cadastrar-se" />
 
               <TouchableOpacity>
                 <Text style={styles.forgotPassword}>Esqueci minha senha</Text>
@@ -61,10 +72,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   forgotPassword: {
-    textAlign:'center',
-    marginTop:20,
-    fontFamily:fonts.heading,
-    color:colors.primary,
-    fontSize:17
+    textAlign: 'center',
+    marginTop: 20,
+    fontFamily: fonts.heading,
+    color: colors.primary,
+    fontSize: 17
   }
 })

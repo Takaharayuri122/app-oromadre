@@ -8,16 +8,20 @@ const $warningColor = '#d32f2f';
 const $successColor = '#00c853';
 const $layout = 'light';
 const $borderRadius = 10;
+const $paddingHorizontal = 20;
+const $titleSize = 28;
 
 export default {
 	appVersion: "1.1",
+	paddingHorizontal: $paddingHorizontal,
+	titleSize: $titleSize,
 	headingFont: Platform.OS == 'android' ? 'Poppins_600SemiBold' : 'helvetica-bold',
 	defaultFont: Platform.OS == 'android' ? 'Poppins_400Regular' : 'helvetica',
 	defaultFontSize: Platform.OS == 'ios' ? 16 : 14,
 	layoutMode: $layout,
-	backgroundColor: $layout =='dark' ? '#222222' : '#f2f2f2',
-	listBackgroundColor: $layout =='dark' ? '#111111' : '#ffffff',
-	listSeparatorColor: $layout =='dark' ? '#222222' : '#eeeeee',
+	backgroundColor: $layout == 'dark' ? '#222222' : '#f2f2f2',
+	listBackgroundColor: $layout == 'dark' ? '#111111' : '#ffffff',
+	listSeparatorColor: $layout == 'dark' ? '#222222' : '#eeeeee',
 	tabBarColor: $layout == 'dark' ? '#111111' : '#fffffff',
 	cardColor: $layout == 'dark' ? '#131313' : '#ffffff',
 	defaultFontColor: $layout == 'dark' ? '#f2f2f2' : '#4f555f',
@@ -29,7 +33,18 @@ export default {
 	defaultBorderRadius: $borderRadius,
 	badgeColor: 'red',
 	badgeTextColor: '#ffffff',
-	productDetailLayout: 'layout1', // layout1 or layout2
+	productDetailLayout: 'layout1',
+	field: {
+		borderRadius: 10,
+		color: colors.heading,
+		borderColor: colors.primary,
+		backgroundColor: colors.white,
+		width: '100%',
+		fontSize: 18,
+		padding: 10,
+		borderBottomWidth: 2,
+		marginBottom: 10
+	}, // layout1 or layout2
 	style: {
 		iconBtn: {
 			padding: 5
@@ -67,19 +82,19 @@ export default {
 		formInput: {
 			fontWeight: "bold",
 			color: $layout == 'dark' ? '#ffffff' : '#111111',
-			fontSize: 16, 
-			paddingLeft: 23, 
-			paddingRight: 3, 
-			paddingTop: 6, 
-			paddingBottom: 6, 
-			borderBottomWidth: 1, 
+			fontSize: 16,
+			paddingLeft: 23,
+			paddingRight: 3,
+			paddingTop: 6,
+			paddingBottom: 6,
+			borderBottomWidth: 1,
 			borderBottomColor: '#bcbcbc',
 		},
 		formInput2: {
 			fontWeight: "bold",
-			color: '#111111', 
-			fontSize: 15, 
-			borderBottomWidth: 0, 
+			color: '#111111',
+			fontSize: 15,
+			borderBottomWidth: 0,
 			backgroundColor: '#e2e2e2',
 			borderRadius: $borderRadius,
 			paddingHorizontal: 12,
@@ -171,8 +186,8 @@ export default {
 			width: 23
 		},
 		labelText: {
-			color: '#a7a6b4', 
-			fontSize: 13.5 
+			color: '#a7a6b4',
+			fontSize: 13.5
 		},
 	},
 };

@@ -6,7 +6,7 @@ export default Row = (props) => {
     const {style} = props;
     const defaultStyle = {
         flexDirection: 'row',
-        marginHorizontal: props.nomargin === true ? 0 : -10,
+        // marginHorizontal: props.nomargin === true ? 0 : -10,
         flex: 1
     };
     
