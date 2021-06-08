@@ -4,33 +4,29 @@ import { Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-import { color } from 'react-native-reanimated';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string,
   icon?: any,
-  iconSize?: number
+  iconSize?: number,
+  mode?: string
 }
 
-export function PrimaryButton({ title, icon, iconSize, ...props }: ButtonProps) {
+export function Button({ title = 'Ação', icon, iconSize, mode = 'default', ...props }: ButtonProps) {
   return (
-    <TouchableOpacity style={[primaryButton.container, (props.disabled) ? primaryButton.disabled : false, props.style]} {...props}>
-      <Text style={primaryButton.text}>
+    <TouchableOpacity {...props} style={[
+                                          primaryButton.container,
+                                          (props.disabled) ? primaryButton.disabled : false,
+                                          (mode == 'outline') ? outlineButton.container : false,
+                                          props.style
+                                        ]}>
+      <Text style={[primaryButton.text, (mode == 'outline') ? outlineButton.text : false]}>
         {icon && <AntDesign name={icon} style={primaryButton.icon} size={iconSize} color="black" />} {title}
       </Text>
     </TouchableOpacity>
   )
 }
 
-export function OutlineButton({ title, icon, iconSize, ...props }: ButtonProps) {
-  return (
-    <TouchableOpacity style={[primaryButton.container, outlineButton.container, (props.disabled) ? primaryButton.disabled : false, props.style]} {...props}>
-      <Text style={[primaryButton.text, outlineButton.text]}>
-        {icon && <AntDesign name={icon} style={primaryButton.icon} size={iconSize} color="black" />} {title}
-      </Text>
-    </TouchableOpacity>
-  )
-}
 
 const primaryButton = StyleSheet.create({
   container: {

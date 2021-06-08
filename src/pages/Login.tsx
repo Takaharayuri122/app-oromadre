@@ -1,23 +1,15 @@
 import React from 'react';
-import { SafeAreaView, Text, Image, StyleSheet, View, KeyboardAvoidingView, TouchableWithoutFeedback, Platform, TextInput } from 'react-native';
+import { SafeAreaView, Text, Image, StyleSheet, View, KeyboardAvoidingView, TouchableWithoutFeedback, Platform } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import logo from '../assets/images/logo.png';
-import { OutlineButton, PrimaryButton } from '../components/Buttons';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-import inputsStyles from '../styles/inputsStyles';
 import { useNavigation } from '@react-navigation/core';
-import { Input } from '../components/Input';
+import { TextInput } from 'react-native-paper';
+import { Button } from '../components/Buttons';
 
 export function Login() {
   const navigation = useNavigation();
-  function onNext() {
-    navigation.navigate('Generic.Confirmation', {
-      title: 'Para que possamos iniciar seu cadastro, é necessário que você confirme algumas informações',
-      button: 'Continuar',
-      route: 'Register'
-    })
-  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -30,13 +22,15 @@ export function Login() {
             </View>
 
             <View style={styles.formContainer}>
-              <View style={{ marginBottom: 20 }}>
-                <Input placeholder="E-mail" autoCompleteType="email"/>
-                <Input placeholder="Senha" autoCompleteType="password" secureTextEntry={true}/>
+              <View>
+                <TextInput mode="outlined" label="E-mail" autoCompleteType="email" style={{ marginBottom: 20 }} />
+                <TextInput mode="outlined" label="Senha" autoCompleteType="password" secureTextEntry={true} />
               </View>
 
-              <PrimaryButton title="Entrar" />
-              <OutlineButton onPress={onNext} title="Cadastrar-se" />
+
+              <Button title="Entrar" onPress={() => navigation.navigate('Dashboard')}/>
+              <Button title="Cadastrar-se" mode="outline" onPress={() => navigation.navigate('Dashboard')}/>
+
 
               <TouchableOpacity>
                 <Text style={styles.forgotPassword}>Esqueci minha senha</Text>

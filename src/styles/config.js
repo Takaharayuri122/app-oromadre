@@ -8,7 +8,7 @@ const $warningColor = '#d32f2f';
 const $successColor = '#00c853';
 const $layout = 'light';
 const $borderRadius = 10;
-const $paddingHorizontal = 20;
+const $paddingHorizontal = 25;
 const $titleSize = 28;
 
 export default {
@@ -39,7 +39,6 @@ export default {
 		color: colors.heading,
 		borderColor: colors.primary,
 		backgroundColor: colors.white,
-		width: '100%',
 		fontSize: 18,
 		padding: 10,
 		borderBottomWidth: 2,
@@ -50,6 +49,10 @@ export default {
 			padding: 5
 		},
 		iconBtnColor: '#ffffff',
+		buttonMargin: {
+			marginTop: 20, 
+			marginBottom: 20
+		},
 		roundBtn: {
 			padding: 10,
 			backgroundColor: $primaryColor,

@@ -6,7 +6,7 @@ import config from '../styles/config';
 
 export function Input({ ...props }) {
   return (
-    <TextInput style={styles.field}  {...props} placeholder={props.placeholder} autoCompleteType={props.type} />
+    <TextInput style={[styles.field ]}  {...props} placeholder={props.placeholder} autoCompleteType={props.type} />
   )
 };
 

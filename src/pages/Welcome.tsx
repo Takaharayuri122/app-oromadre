@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View } from 'react-native'
+import tailwind from 'tailwind-rn';
 import { Text, Image } from 'react-native';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import { useNavigation } from '@react-navigation/core';
 import logo from '../assets/images/logo.png';
-import { Btn } from '../components';
+import { Button } from '../components/Buttons';
 
 
 export function Welcome() {
@@ -23,13 +24,14 @@ export function Welcome() {
       </Text>
 
       <Image source={logo} style={styles.image} resizeMode="contain" />
+      <View style={tailwind('flex flex-row')}>
+        <Button title="Começar" onPress={onNavigate}></Button>
+      </View>
 
 
       {/* <Text style={styles.subtitle}>
         Administração de Criptoativos
       </Text> */}
-
-      <Btn type="primary" label="Começar" onPress={onNavigate}></Btn>
 
     </SafeAreaView>
   )

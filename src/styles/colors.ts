@@ -15,5 +15,7 @@ export default {
   blue: '#3D7199',
   blue_light: '#EBF6FF',
 
+  background_primary: 'rgba(222, 222, 222, 0.24)',
+
   red: '#E83F5B',
 };
